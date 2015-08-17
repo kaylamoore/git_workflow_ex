@@ -1,3 +1,7 @@
+h3 {
+	text-align: center;
+}
+
 .board {
 	width: 306px;
 	margin: 0 auto;
@@ -8,4 +12,9 @@
 	height: 100px;
 	border: 1px solid black;
 	float: left;
+}
+
+button {
+	overflow: auto;
+	width: 100%;
 }
