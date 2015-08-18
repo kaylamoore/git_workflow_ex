@@ -22,11 +22,11 @@ function getPiece(){
 	}
 }
 
-
-// button.addEventListener(“click”, resetBoard);
+// button.addEventListener("click", resetBoard);
 
 // function resetBoard(){
-//     for(var i = 0; i < boxes.length; i++){
-//      	boxes[i].innerHTML = “”;
+//    for(var i = 0; i < boxes.length; i++){
+//     	boxes[i].innerHTML = “”;
 // 	} 
 // }
+ 
