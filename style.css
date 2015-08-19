@@ -7,7 +7,7 @@ h3 {
 	margin: 0 auto;
 }
 
-.square {
+.box {
 	width: 100px;
 	height: 100px;
 	border: 1px solid black;
@@ -15,6 +15,9 @@ h3 {
 }
 
 button {
-	overflow: auto;
-	width: 100%;
+	display: inline-block;
+	margin-left: 480px;
+	margin-right: 480px;
+	margin-bottom: 20px;
+	width: 200px;
 }
