@@ -2,6 +2,7 @@ var turn = 0;
 // var boxes = document.querySelectorAll(".box");
 var boxes = $('.box'); console.log(boxes);
 var button = document.querySelector("button")
+var array =[[0,1,2],[3,4,5],[6,7,8],[0,4,8],[1,4,7],[2,5,8],[0,3,6],[1,4,7],[2,5,8]];
 
 $(".box").on("click", function(){
     console.log(this.html);
@@ -22,6 +23,21 @@ $("#reset").on("click", function(){
   $(".box").empty();
 });
 
+function checkForWinner(){
+  console.log()
+}
+
+// // Determines winner
+// function isWinner(player){
+//     for(var i = 0; i < array.length; i++){
+//         if(boxes[array[i][0]].innerHTML === player && boxes[array[i][1]].innerHTML === player && boxes[array[i][2]].innerHTML === player){
+            
+//             console.log(player + " Wins!");
+
+//         }
+//     }        
+            
+// }
 
 
 //button.addEventListener("click", resetBoard);
