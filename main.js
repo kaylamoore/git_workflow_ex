@@ -5,12 +5,17 @@ var button = document.querySelector("button")
 
 $(".box").on("click", function(){
     console.log(this);
-    if (turn ===1) {
-      $(this).html("O");
-    }else {
-      $(this).html("X");
-    }turn= turn ===0?1:0;
-});
+    if (!this.innerHTML)
+    {
+      if (turn ===1){
+        $(this).html("X");
+      } else {
+        $(this).html("O");
+      }
+        turn=turn===0?1:0;
+    }
+  });
+   
 //ternary: alternates between one and zero, true and false 
  //button.addEventListener("click", resetBoard);
 
@@ -18,7 +23,6 @@ $(".box").on("click", function(){
  //   sum+=value;
 //})
 
-console.log(sum); 
 //for(var i = 0; i < boxes.length; i++){
 //   boxes[i].addEventListener("click", takeTurn)
 //}
