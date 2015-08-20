@@ -2,7 +2,7 @@ var turn = 0;
 // var boxes = document.querySelectorAll(".box");
 var boxes = $('.box'); console.log(boxes);
 var button = document.querySelector("button")
-var array =[[0,1,2],[3,4,5],[6,7,8],[0,4,8],[1,4,7],[2,5,8],[0,3,6],[1,4,7],[2,5,8]];
+var arr =[[0,1,2],[3,4,5],[6,7,8],[0,4,8],[1,4,7],[2,5,8],[0,3,6],[1,4,7],[2,5,8]];
 
 $(".box").on("click", function(){
     console.log(this.html);
@@ -14,7 +14,8 @@ $(".box").on("click", function(){
         $(this).html("O");
       }
         turn=turn===0?1:0;
-    }
+    };
+    checkForWinner();
   });
    
 //ternary: alternates between one and zero, true and false 
@@ -23,16 +24,18 @@ $("#reset").on("click", function(){
   $(".box").empty();
 });
 
-function checkForWinner(){
-  console.log()
-}
-
 // // Determines winner
-// function isWinner(player){
-//     for(var i = 0; i < array.length; i++){
-//         if(boxes[array[i][0]].innerHTML === player && boxes[array[i][1]].innerHTML === player && boxes[array[i][2]].innerHTML === player){
+function checkForWinner(){
+  $.each( arr, function(index, value){
+    if (boxes[value[0]].innerHTML === boxes[value[1]].innerHTML  && boxes[value[1]].innerHTML === boxes[value[2]].innerHTML && boxes[value[2]].innerHTML !== ""){
+      console.log("Winner");
+    }
+  });
+}
+    // for(var i = 0; i < array.length; i++){
+    //      if(boxes[array[i][0]].innerHTML === player && boxes[array[i][1]].innerHTML === player && boxes[array[i][2]].innerHTML === player){
             
-//             console.log(player + " Wins!");
+    //         console.log(player + " Wins!");
 
 //         }
 //     }        
