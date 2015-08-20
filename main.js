@@ -4,8 +4,8 @@ var boxes = $('.box'); console.log(boxes);
 var button = document.querySelector("button")
 
 $(".box").on("click", function(){
-    console.log(this);
-    if (!this.innerHTML)
+    console.log(this.html);
+    if ( this.innerText === "" )
     {
       if (turn ===1){
         $(this).html("X");
@@ -17,6 +17,11 @@ $(".box").on("click", function(){
   });
    
 //ternary: alternates between one and zero, true and false 
+$("#reset").on("click", function(){
+  console.log(this);
+  $(".box").empty();
+});
+
  //button.addEventListener("click", resetBoard);
 
 //$.each(boxes, function (index, value ){
