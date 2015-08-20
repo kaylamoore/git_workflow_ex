@@ -5,7 +5,7 @@ var button = document.querySelector("button")
 
 $(".box").on("click", function(){
     console.log(this.html);
-    if ( this.innerText === "" )
+    if ($(this).html() === (""))
     {
       if (turn ===1){
         $(this).html("X");
@@ -22,8 +22,9 @@ $("#reset").on("click", function(){
   $(".box").empty();
 });
 
- //button.addEventListener("click", resetBoard);
 
+
+//button.addEventListener("click", resetBoard);
 //$.each(boxes, function (index, value ){
  //   sum+=value;
 //})
