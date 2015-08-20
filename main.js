@@ -1,13 +1,24 @@
-var turnCount = 0;
+var turn = 0;
 // var boxes = document.querySelectorAll(".box");
 var boxes = $('.box'); console.log(boxes);
 var button = document.querySelector("button")
 
-$(".box").on("click", function (){
+$(".box").on("click", function(){
     console.log(this);
-})
+    if (turn ===1) {
+      $(this).html("X");
+    }else {
+      $(this).html("0");
+    }turn= turn ===0?1:0;
+});
+//ternary: alternates between one and zero, true and false 
  //button.addEventListener("click", resetBoard);
 
+//$.each(boxes, function (index, value ){
+ //   sum+=value;
+//})
+
+console.log(sum); 
 //for(var i = 0; i < boxes.length; i++){
 //   boxes[i].addEventListener("click", takeTurn)
 //}
