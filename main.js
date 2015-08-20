@@ -6,9 +6,9 @@ var button = document.querySelector("button")
 $(".box").on("click", function(){
     console.log(this);
     if (turn ===1) {
-      $(this).html("X");
+      $(this).html("O");
     }else {
-      $(this).html("0");
+      $(this).html("X");
     }turn= turn ===0?1:0;
 });
 //ternary: alternates between one and zero, true and false 
